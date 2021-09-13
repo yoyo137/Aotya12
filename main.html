@@ -270,6 +270,76 @@ STAGE3-3追加　ここまで -->
       <!-- STAGE3　ここまで -->
 
     </div>
+    <!-- STAGE4ここから -->
+      <div id="sectionStage1" class="stage">
+
+        <!-- STAGE4問題セクション　ここから -->
+        <section class="section">
+          <div class="container">
+            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：1</span>さぁゲームを始めよう！</h2>
+            <p class="text-center">ピラミッドの中に進むには入り口の問題を解かなくてはならない<br>仲間達から入り口に書いてある絵の写真が送られてきた</p>
+            <p class="text-center">困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</p>
+  
+            <div class="container">
+              <figure class="image__container">
+                <img src="" alt="">
+                <img src="assets/images/nazo1.png" alt="nazo1">
+              </figure>
+                
+ <!--  YouTube貼り付け
+              <div class="youtube__container">
+                <div class="youtube">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/IRyJe-0Uie0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+Youtube貼り付けここまで -->
+                
+            </div>
+          </div>
+        </section>
+        <!-- STAGE4問題セクション　ここまで -->
+
+        <!-- STAGE4解答入力セクション　ここから -->
+        <section class="section bg-color--keycolor">
+          <div class="container">
+            <h2 class="section-title"><span class="section-title__stage">STAGE：1</span>キーワードを入力</h2>
+            <!------------------------------------------------------------------------------------------------------------
+              解答入力欄のコンポーネントです。入力欄・送信ボタン・エラーメッセージを表示します。
+              v-bind:correct="correctAnswer['stage1']['q1']" は正解の解答を指します。
+              v-on:answer-input="answerInput($event, 'stage1', 1)" は送信ボタンをクリックした時の動作を決める関数です。
+              2番目、3番目の1引数 'stage1', 1 はstage1の1問目ということになります。
+              1番麺の引数 $event は正解、不正解の判定を受け取る変数です。
+              []、()の間違い、''の抜けがあると動きません。
+            ------------------------------------------------------------------------------------------------------------>
+            <answer-input v-bind:correct="correctAnswer['stage4']['q1']" v-on:answer-input="answerInput($event, 'stage4', 1)"></answer-input>
+
+            <a class="link-hint" href="hint4.html" target="hint4">ヒントをみる ></a>
+          </div>
+        </section>
+        <!-- STAGE1解答入力セクション　ここまで -->
+
+        <!-- STAGE1クリア画面　ここから -->
+        <!------------------------------------------------------------------------------------------------------
+          ステージを全問正解するとclear['stage1']がtrusになります。
+          v-if="clear['stage1']"はclear['stage1']がtrueになったら表示します。
+          v-bind:class="{isClear:clear['stage1']}"はclear['stage1']がtrueになったら「isClear」クラスを追加します。
+        -------------------------------------------------------------------------------------------------------->
+        <section v-if="clear['stage1']" v-bind:class="{isClear:clear['stage1']}"  class="section section--clear bg-color--gray">
+          <div class="container">
+            <div class="clear-message">
+              <div class="clear-message__title">STAGE：１  クリア！</div>
+              <div class="clear-message__content">ピラミッドの扉が開いた！<br>
+                さぁ財宝のために<br>
+                残りの問題もしっかり解こう！</div>
+              <button v-on:click="nextStage('stage1')" onclick="location.href='#sectionStage2'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+            </div>
+          </div>
+        </section>
+        <!-- STAGE1クリア画面　ここまで -->
+
+      </div>
+      <!-- STAGE1　ここまで -->
+
   </main>
   <footer class="footer section bg-color--gray">
     <div class="container">
