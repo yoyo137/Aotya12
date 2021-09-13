@@ -58,19 +58,19 @@ input[type=text] {
 }
 
 ::-webkit-input-placeholder {
-  color: #999;
+  color: #e6e6e6;
 }
 
 :-ms-input-placeholder {
-  color: #999;
+  color: #e6e6e6;
 }
 
 ::-ms-input-placeholder {
-  color: #999;
+  color: #e6e6e6;
 }
 
 ::placeholder {
-  color: #999;
+  color: #e6e6e6;
 }
 
 button {
@@ -198,7 +198,7 @@ button {
           transform: rotate(90deg);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  fill: #009245;
+  fill: #a0522d;
   width: 12px;
   height: 24px;
 }
@@ -243,7 +243,7 @@ button {
 }
 
 .bg-color--subcolor {
-  background-color: #d9e021;
+  background-color: #e2c79b;
 }
 
 .bg-color--gray {
@@ -292,7 +292,7 @@ button {
 }
 
 .section-title--keycolor {
-  background-color: #39b54a;
+  background-color: #e2c79b;
 }
 
 .section-title--story {
@@ -307,7 +307,7 @@ button {
   line-height: 1.06667;
   margin: 0;
   padding-bottom: 15px;
-  color: #006837;
+  color: #a0522d;
 }
 
 .section-title--border::after {
@@ -336,7 +336,7 @@ button {
   display: block;
   text-decoration: none;
   cursor: pointer;
-  background-color: #006837;
+  background-color: #a0522d;
   color: #fff;
   font-size: 24px;
   line-height: 1.54167;
@@ -453,7 +453,7 @@ button {
 }
 
 .clear-message {
-  background-color: #c0c0c0;
+  background-color: #e2c79b;
   padding: 30px 30px 60px;
   position: relative;
 }
